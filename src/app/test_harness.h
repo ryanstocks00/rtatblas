@@ -36,6 +36,7 @@ public:
       case AUTOTUNE:
         return "autotune";
     }
+    __builtin_unreachable();
   }
 };
 
@@ -74,6 +75,7 @@ public:
       case TRSM:
         return "trsm";
     }
+    __builtin_unreachable();
   }
 };
 
@@ -102,6 +104,7 @@ public:
       case FLOAT:
         return "float";
     }
+    __builtin_unreachable();
   }
 };
 

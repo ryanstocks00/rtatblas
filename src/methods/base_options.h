@@ -20,8 +20,8 @@ public:
     switch (op) {
       case TRANS: return "T";
       case NOTRANS: return "N";
-      default: throw;
     }
+    __builtin_unreachable();
   }
 
   BLAS_Op operator!() {
@@ -31,6 +31,7 @@ public:
       case TRANS:
         return BLAS_Op(NOTRANS);
     }
+    __builtin_unreachable();
   }
 
   BLAS_Op(_BLAS_Op op) : op(op) {}
@@ -66,8 +67,8 @@ public:
     switch (op) {
       case PAD: return "P";
       case NOPAD: return "N";
-      default: throw;
     }
+    __builtin_unreachable();
   }
 
   Pad_Op operator!() {
@@ -77,6 +78,7 @@ public:
       case PAD:
         return Pad_Op(NOPAD);
     }
+    __builtin_unreachable();
   }
 
   Pad_Op(_Pad_Op op) : op(op) {}

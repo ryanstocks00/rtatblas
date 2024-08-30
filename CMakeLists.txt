@@ -42,8 +42,11 @@ else()
 endif()
 
 add_subdirectory(src)
-enable_testing()
-add_subdirectory(tests)
+
+if(BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(tests)
+endif()
 
 install(TARGETS rtatblas RUNTIME DESTINATION lib)
 #install(TARGETS autotune RUNTIME DESTINATION bin)
